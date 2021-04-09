@@ -11,7 +11,7 @@ export default class ItemCount extends Component {
       count: 0,
     };
   }
-
+//Comentario
   handleIncrement = () => {
     this.setState({ count: this.state.count + 1 });
   };
