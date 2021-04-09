@@ -1,0 +1,15 @@
+
+.navMenu a{
+    text-decoration: none;
+    font-size: 20px;
+}
+.navMenu--container{
+    display: flex;
+    align-items: center;
+    padding-left: 680px;
+}
+.navMenu{
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+  }
