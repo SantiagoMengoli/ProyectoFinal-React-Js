@@ -19,12 +19,12 @@ export const Item = ({ item }) => {
             image={item.foto}
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-            <h3>{ item.nombre }</h3>
+            <Typography gutterBottom>
+            { item.nombre }
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-            <h5>{ item.marca }</h5>
-            <p>{ item.precio }</p>
+            <Typography color="textSecondary">
+            { item.marca }
+            { item.precio }
             </Typography>
           </CardContent>
         </CardActionArea>
