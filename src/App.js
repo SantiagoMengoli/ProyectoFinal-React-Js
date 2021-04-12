@@ -1,8 +1,9 @@
 
 import './App.css';
 import  NavBar from './components/navbar/NavBar';
-import ItemListContainer from './components/ItemList/ItemListContainer';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemCount from './components/ItemCount/ItemCount';
+import  BotinFutbol from './components/ItemList/ItemList'
 const App = () => {
   return(
       <div>
@@ -10,7 +11,7 @@ const App = () => {
           <h1 className="tituloPrincipal">Tienda</h1>
           <NavBar/>
         </div>
-        <ItemListContainer mensaje="Bienvienido! Buen Dia!"/>
+        <ItemListContainer />
         
         <div>
           <ItemCount />
