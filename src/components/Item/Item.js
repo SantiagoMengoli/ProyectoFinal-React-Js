@@ -1,16 +1,48 @@
+import React from 'react';
+import './Item.css';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Typography from '@material-ui/core/Typography';
 
 
-var productos = [
-    {id: 1, marca: "Adidas", nombre: "Adizero", tipo: "pasto natural", precio: "$7500", talle: "42"},
-    {id: 2, marca: "Nike", nombre: "Mercurial", tipo: "pasto sintetico", precio: "$5000", talle: "41"},
-    {id: 3, marca: "Puma", nombre: "Monarch", tipo: "pasto natural", precio: "$6500", talle: "38"},
-    {id: 4, marca: "Adidas", nombre: "Predator", tipo: "pasto natural", precio: "$7500", talle: "43"},
-  ]
-  
-  var botinSelecionado = productos.map(function(botines) {
-    return `El botin que usted selecciono es ${botines.marca} y el talle disponible es ${botines.talle}` ;
-  });
-  console.log (botinSelecionado)
+export const Item = ({ item }) => {
 
-export default productos;
+    return (
+      <Card className={item.root}>
+        <CardActionArea>
+          <CardMedia
+            className={item.media}
+            image={item.foto}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+            <h3>{ item.nombre }</h3>
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+            <h5>{ item.marca }</h5>
+            <p>{ item.precio }</p>
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+  );}
+
+  export default function MediaCard() {
+    const classes = useStyles();
+  }  
+
+ 
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 345,
+  },
+  media: {
+    height: 140,
+  },
+});
+
+
  

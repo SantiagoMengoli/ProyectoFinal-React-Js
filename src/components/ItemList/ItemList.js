@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import productos from '../Item/Item'
+import { Item } from '../Item/Item';
+import './ItemList.css';
 
-class BotinFutbol extends Component {
-   constructor() {
-        super();
+class ItemList extends Component {
+   constructor(props) {
+        super(props);
         this.state = {
             productoSeleccionado: []
         };
@@ -11,18 +12,21 @@ class BotinFutbol extends Component {
     componentDidMount(){
         setTimeout(() => {
             this.setState({
-                productoSeleccionado: productos,
+                productoSeleccionado: this.props.items,
             })
         }, 2000);
     }
     render(){
         return (
-        <div>
-            <ul> {this.state.productoSeleccionado.map((a) => {
-                   return <li>{a.marca} - {a.talle}</li>;})}
-            </ul>
-        </div>
+            <div className="ItemList">
+            {
+              this.state.productoSeleccionado && this.state.productoSeleccionado.map((producto) => {
+                return <Item item={producto} key={producto.id} />;
+              })
+            }
+    
+          </div>
     )}
    }
 
-export default BotinFutbol;
+export default ItemList;

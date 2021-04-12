@@ -1,9 +1,6 @@
-.mensajeBienvenida{
-    display: flex;
-    justify-content: center;
-}
+
 .botinStyle{
     display: flex;
     justify-content: center;
-    text-decoration: none;
+    flex-direction: row;
 }
