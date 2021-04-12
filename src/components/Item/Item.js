@@ -6,15 +6,16 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+;
 
 
 export const Item = ({ item }) => {
-
+  const classes = useStyles();
     return (
-      <Card className={item.root}>
+      <Card className={classes.root}>
         <CardActionArea>
           <CardMedia
-            className={item.media}
+            className={classes.media}
             image={item.foto}
           />
           <CardContent>
@@ -31,7 +32,7 @@ export const Item = ({ item }) => {
   );}
 
   export default function MediaCard() {
-    const classes = useStyles();
+    
   }  
 
  
