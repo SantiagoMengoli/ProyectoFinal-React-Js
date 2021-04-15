@@ -1,27 +1,27 @@
 import React, { Component } from 'react';
 import { Item } from '../Item/Item';
-import './ItemList.css';
+import './ItemDetail.css';
 
-class ItemList extends Component { 
+class ItemDetail extends Component {
    constructor(props) {
         super(props);
         this.state = {
-            productoSeleccionado: []
+            detalleSeleccionado: []
         };
     }
     componentDidMount(){
         setTimeout(() => {
             this.setState({
-                productoSeleccionado: this.props.items,
+                detalleSeleccionado: this.props.items,
             })
         }, 2000);
     }
     render(){
         return (
-            <div className="ItemList">
+            <div className="ItemDetail">
             {
-              this.state.productoSeleccionado && this.state.productoSeleccionado.map((producto) => {
-                return <Item item={producto} key={producto.id} />;
+              this.state.detalleSeleccionado && this.state.detalleSeleccionado.map((detalles) => {
+                return <Item item={detalles} key={detalles.id} />;
               })
             }
     
@@ -29,4 +29,4 @@ class ItemList extends Component {
     )}
    }
 
-export default ItemList;
+export default ItemDetail;
