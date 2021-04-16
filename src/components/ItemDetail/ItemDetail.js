@@ -1,6 +1,7 @@
+
 import React, { Component } from 'react';
-import { Item } from '../Item/Item';
 import './ItemDetail.css';
+import ButtonExampleAnimated from '../ButtonDetail/ButtonDetail'
 
 class ItemDetail extends Component {
    constructor(props) {
@@ -19,13 +20,29 @@ class ItemDetail extends Component {
     render(){
         return (
             <div className="ItemDetail">
-            {
-              this.state.detalleSeleccionado && this.state.detalleSeleccionado.map((detalles) => {
-                return <Item item={detalles} key={detalles.id} />;
-              })
-            }
-    
-          </div>
+                <div className="fotosProducto">
+                <h1 className="tituloProducto">Adidas Adizero F50</h1>
+                    <img src="https://www.digitalsport.com.ar/files/products/56aa2a3006050-334376-500x500.jpg" width= "80%"></img>
+                </div>
+                <div className="detallesProducto">
+                    <p>Talle: 42 </p>
+                    <br></br>
+                    <p>Botines con tapones altos para campos de juego humedos.</p>
+                    <br></br>
+                    <p>Origen: Brazil.</p>
+                    <br></br>
+                    <p>Colores Disponibles: Azul  Rojo  Naranja</p>
+                    <br></br>
+                    <p>Botines de gran calidad para amateurs o profesionales para el mejor 
+                        desemeño en una cancha de futbol de pasto natural.</p>
+                    <br></br>
+                    <p>Precio: $7500</p>
+                     <ButtonExampleAnimated/>
+                </div>
+                    
+            </div>
+                
+                
     )}
    }
 

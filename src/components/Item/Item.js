@@ -24,11 +24,6 @@ export const Item = ({ item }) => {
             </Typography>
             <Typography color="textSecondary">
             { item.marca }
-            <br></br>
-            {item.talle}
-            <br></br>
-            {item.colores}
-            <br></br>
             { item.precio }
             </Typography>
           </CardContent>
@@ -49,6 +44,3 @@ const useStyles = makeStyles({
     height: 140,
   },
 });
-
-
- 
