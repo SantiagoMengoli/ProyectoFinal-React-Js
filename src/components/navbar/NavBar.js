@@ -1,15 +1,31 @@
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import './style.css';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 const NavBar = () => {
     return(
         <div className="navMenu--container">
             <nav className="navMenu">
-                <a className="palabrasMenu" href="/#">Inicio</a>
-                <a className="palabrasMenu" href="/#">Productos</a>
-                <a className="palabrasMenu" href="/#">Info</a>
-                <a className="palabrasMenu" href="/#">Contacto</a>
-                <a className="palabrasMenu" href="/#"><AddShoppingCartIcon/></a>
+                <Link to="/" className="palabrasMenu">
+                    Inicio
+                </Link>
+                <Link to="/botines" className="palabrasMenu">
+                    Botines
+                </Link>
+                <Link to="/camisetas" className="palabrasMenu">
+                    Camisetas
+                </Link>
+                <Link to="/" className="palabrasMenu">
+                    Contacto
+                </Link>
+                <Link to="/" className="palabrasMenu">
+                    <AddShoppingCartIcon/>
+                </Link>
             </nav>
         </div>
       );

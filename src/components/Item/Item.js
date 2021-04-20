@@ -24,6 +24,7 @@ export const Item = ({ item }) => {
             </Typography>
             <Typography color="textSecondary">
             { item.marca }
+            <br></br>
             { item.precio }
             </Typography>
           </CardContent>

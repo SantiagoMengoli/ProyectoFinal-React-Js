@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import './ItemDetail.css';
-import ButtonExampleAnimated from '../ButtonDetail/ButtonDetail'
+
 
 class ItemDetail extends Component {
    constructor(props) {
@@ -37,7 +37,6 @@ class ItemDetail extends Component {
                         desemeño en una cancha de futbol de pasto natural.</p>
                     <br></br>
                     <p>Precio: $7500</p>
-                     <ButtonExampleAnimated/>
                 </div>
                     
             </div>

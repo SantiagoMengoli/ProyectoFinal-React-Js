@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import './ItemCount.css';
 import { Button } from 'semantic-ui-react'
+import ButtonExampleAnimated from '../ButtonDetail/ButtonDetail'
 
 export default class ItemCount extends Component {
   constructor() {
@@ -33,7 +34,7 @@ export default class ItemCount extends Component {
           <Button primary onClick={this.handleDecrement}>-</Button>
         </div>
         <div className="agregarAlCarrito">
-        <Button primary>Agregar al Carrito</Button>
+        <ButtonExampleAnimated/>
         </div>
       </div>
     );
