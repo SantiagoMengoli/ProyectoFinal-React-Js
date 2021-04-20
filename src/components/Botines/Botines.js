@@ -1,7 +1,7 @@
 
-import ItemList from './ItemList/ItemList'
+import ItemList from '../ItemList/ItemList'
 
-function Camisetas() {
+function Botines() {
 
   var productos = [
     { id: 1, categoria: "botines", marca: "Adidas", nombre: "Adizero", tipo: "pasto natural", precio: "$7500", talle: "42", foto: "https://www.digitalsport.com.ar/files/products/56aa2a3006050-334376-500x500.jpg" },
@@ -13,18 +13,20 @@ function Camisetas() {
     { id: 7, categoria: "camisetas", marca: "Puma", nombre: "Manchester City", precio: "$5500", talle: "L", foto: "https://essential.vteximg.com.br/arquivos/ids/259739-454-423/962-1144_1.jpg?v=636990631998700000" },
     { id: 8, categoria: "camisetas", marca: "Under Armor", nombre: "Estudiantes", precio: "$7500", talle: "XL", foto: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG4P2BrWHv-Bufd8Ys7RLosWQBlILNbmUuFRf08GYJDQMHj44Uam30ibk_sCqNXIyomyrdde2v&usqp=CAc" },
   ];
-  
-    var categoriaCamisetas = productos
+    var categoriaBotines = productos
       .filter(function(productos) {
         return productos.categoria === "botines";
       
     })
+   
   return (
     <div className="botinStyle">
-      <ItemList items={categoriaCamisetas}/>
+      <ItemList items={categoriaBotines}/>
     </div>
   )
  
 }
 
-export default Camisetas;
+
+
+export default Botines;

@@ -4,8 +4,8 @@ import  NavBar from './components/navbar/NavBar';
 import ItemCount from './components/ItemCount/ItemCount';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
-import Botines from './views/Botines/Botines'
-import Camisetas from './views/Camisetas/Camisetas'
+import Botines from './components/Botines/Botines'
+import Camisetas from './components/Camisetas/Camisetas'
 
 import {
   BrowserRouter as Router,
@@ -29,13 +29,13 @@ const App = () => {
             <Route path="/" exact>
               <ItemListContainer />
             </Route>
-            <Route path="/botines">
+            <Route path="/botines/:id">
               <Botines />
             </Route>
-            <Route path="/camisetas">
+            <Route path="/camisetas/:id">
               <Camisetas />
             </Route>
-            <Route path="/item/id">
+            <Route path="/item/:id">
               <ItemDetailContainer/>
             </Route>
           </Switch>
