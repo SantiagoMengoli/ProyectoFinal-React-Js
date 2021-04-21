@@ -29,11 +29,11 @@ const App = () => {
             <Route path="/" exact>
               <ItemListContainer />
             </Route>
-            <Route path="/botines/:id">
-              <Botines />
+            <Route exact path="/category/:id">
+              <ItemListContainer/>
             </Route>
-            <Route path="/camisetas/:id">
-              <Camisetas />
+            <Route path="/category/:id">
+              <ItemListContainer />
             </Route>
             <Route path="/item/:id">
               <ItemDetailContainer/>

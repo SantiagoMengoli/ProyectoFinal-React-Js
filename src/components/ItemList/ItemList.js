@@ -16,6 +16,13 @@ class ItemList extends Component {
             })
         }, 2000);
     }
+    componentDidUpdate(){
+        setTimeout(() => {
+            this.setState({
+                productoSeleccionado: this.props.items,
+            })
+        }, 2000);
+    }
     render(){
         return (
             <div className="ItemList">
