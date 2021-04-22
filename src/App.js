@@ -4,8 +4,6 @@ import  NavBar from './components/navbar/NavBar';
 import ItemCount from './components/ItemCount/ItemCount';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
-import Botines from './components/Botines/Botines'
-import Camisetas from './components/Camisetas/Camisetas'
 
 import {
   BrowserRouter as Router,
