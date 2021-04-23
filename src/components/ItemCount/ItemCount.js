@@ -3,15 +3,21 @@ import React, { Component } from 'react';
 import './ItemCount.css';
 import { Button } from 'semantic-ui-react'
 import ButtonExampleAnimated from '../ButtonDetail/ButtonDetail'
+import {
+  Link
+} from "react-router-dom";
 
 export default class ItemCount extends Component {
+  
   constructor() {
     super();
 
     this.state = {
       count: 0,
     };
+    
   }
+  
 //Comentario
   handleIncrement = () => {
     this.setState({ count: this.state.count + 1 });
@@ -34,7 +40,9 @@ export default class ItemCount extends Component {
           <Button primary onClick={this.handleDecrement}>-</Button>
         </div>
         <div className="agregarAlCarrito">
-        <ButtonExampleAnimated/>
+          <Link to="/cart">
+              <ButtonExampleAnimated/>
+          </Link>
         </div>
       </div>
     );

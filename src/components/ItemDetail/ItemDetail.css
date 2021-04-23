@@ -2,11 +2,12 @@
     width: 2500px;
     display: flex;
     justify-content: space-around;
-    
+    width: 1400px;
 }
 .detallesProducto{
     font-size: 22px;
     margin: 15px;
+    
     padding: 20px 10px 10px 0;
 }
 .fotosProducto{

@@ -1,10 +1,11 @@
-import { AddShoppingCartIcon}  from "@material-ui/core"
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import React from 'react'
 
- export const CartWidget = () => {
-    return(
-        <>
-        <AddShoppingCartIcon/>
-        </>
-    )
+    const CartWidget = () => {
+        return(
+            <>
+            <ShoppingCartIcon/>
+            </>
+        )
 }
+export default CartWidget;

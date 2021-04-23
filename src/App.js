@@ -1,9 +1,10 @@
 
 import './App.css';
 import  NavBar from './components/navbar/NavBar';
-import ItemCount from './components/ItemCount/ItemCount';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import Footer from './components/Footer/Footer'
+import CarritoDeCompras from './components/CarritoDeCompras/CarritoDeCompras'
 
 import {
   BrowserRouter as Router,
@@ -19,7 +20,7 @@ const App = () => {
       <div>
           <div className="barraHeader">
             <Link to="/" className="tituloPrincipal">
-            <h1 >Tienda</h1>
+            <h1 >Deportify</h1>
             </Link>
             <NavBar/>
           </div>
@@ -30,15 +31,20 @@ const App = () => {
             <Route exact path="/category/:id">
               <ItemListContainer/>
             </Route>
-            <Route path="/category/:id">
+            <Route exact path="/category/:id">
               <ItemListContainer />
             </Route>
             <Route path="/item/:id">
               <ItemDetailContainer/>
             </Route>
+            <Route path="/cart">
+              <CarritoDeCompras/>
+            </Route>
+
           </Switch>
-          <div>
-            <ItemCount />
+          
+          <div className="footer">
+            <Footer/>
           </div>
       </div>
       

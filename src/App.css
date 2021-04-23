@@ -1,14 +1,28 @@
 .App {
    background-color: #282c34;
 }
+h1{
+  color: black;
+}
 .barraHeader{
   display: flex;
   flex-direction: row;
   background-color: rgb(152, 197, 212);
+  color:black;
+  height: 40px;
   margin: 20px 20px 0 20px;
   padding-left: 30px;
 }
 .tituloPrincipal{
   display: flex;
   justify-content: left;
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  background-color: rgb(152, 197, 212);
+  margin: 20px 20px 0 20px;
+  height: 100px;
 }

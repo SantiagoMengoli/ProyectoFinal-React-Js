@@ -1,9 +1,6 @@
-import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import './style.css';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
     Link
   } from "react-router-dom";
 
@@ -23,8 +20,8 @@ const NavBar = () => {
                 <Link to="/" className="palabrasMenu">
                     Contacto
                 </Link>
-                <Link to="/" className="palabrasMenu">
-                    <AddShoppingCartIcon/>
+                <Link to="/cart" className="palabrasMenu">
+                    <ShoppingCartIcon/>
                 </Link>
             </nav>
         </div>

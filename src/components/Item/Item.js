@@ -6,12 +6,16 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-;
+import {
+  Link
+} from "react-router-dom";
+
 
 
 export const Item = ({ item }) => {
   const classes = useStyles();
     return (
+      <Link to="/item/:id">
       <Card className={classes.root}>
         <CardActionArea>
           <CardMedia
@@ -30,6 +34,7 @@ export const Item = ({ item }) => {
           </CardContent>
         </CardActionArea>
       </Card>
+      </Link>
   );}
 
   export default function MediaCard() {

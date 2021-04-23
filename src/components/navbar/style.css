@@ -2,11 +2,12 @@
 .navMenu a{
     text-decoration: none;
     font-size: 20px;
+    color: black;
 }
 .navMenu--container{
     display: flex;
     align-items: center;
-    padding-left: 680px;
+    padding-left: 660px;
 }
 .navMenu{
   display: flex;
