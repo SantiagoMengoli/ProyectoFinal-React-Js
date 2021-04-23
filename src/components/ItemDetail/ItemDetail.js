@@ -24,7 +24,7 @@ class ItemDetail extends Component {
               <div className="ItemDetail" >
                   <div className="fotosProducto">
                   <h1 className="tituloProducto">Adidas Adizero F50</h1>
-                      <img src="https://www.digitalsport.com.ar/files/products/56aa2a3006050-334376-500x500.jpg" width= "80%"></img>
+                      <img src="https://www.digitalsport.com.ar/files/products/56aa2a3006050-334376-500x500.jpg" width= "80%" alt=""></img>
                   </div>
                   <div className="detallesProducto">
                       <p>Talle: 42 </p>
