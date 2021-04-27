@@ -3,7 +3,7 @@ import { Button, Icon } from 'semantic-ui-react'
 
 const ButtonExampleAnimated = () => (
   <div>
-    <Button classname="buttonCarrito" animated='vertical'>
+    <Button className="buttonCarrito" animated='vertical'>
       <Button.Content hidden>Carrito</Button.Content>
       <Button.Content visible>
         <Icon name='shop' />
@@ -11,5 +11,4 @@ const ButtonExampleAnimated = () => (
     </Button>
   </div>
 )
-
 export default ButtonExampleAnimated

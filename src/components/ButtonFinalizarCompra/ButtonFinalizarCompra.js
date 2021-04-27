@@ -6,5 +6,4 @@ const ButtonFinalizarCompra = () => (
    <Button primary>Finalizar Compra</Button>
   </div>
 )
-
 export default ButtonFinalizarCompra

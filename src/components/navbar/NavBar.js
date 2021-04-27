@@ -1,4 +1,4 @@
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import CartWidget from '@material-ui/icons/ShoppingCart';
 import './style.css';
 import {
     Link
@@ -21,7 +21,7 @@ const NavBar = () => {
                     Contacto
                 </Link>
                 <Link to="/cart" className="palabrasMenu">
-                    <ShoppingCartIcon/>
+                    <CartWidget/>
                 </Link>
             </nav>
         </div>

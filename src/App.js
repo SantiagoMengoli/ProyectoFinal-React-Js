@@ -20,12 +20,12 @@ const App = () => {
       <div>
           <div className="barraHeader">
             <Link to="/" className="tituloPrincipal">
-            <h1 >Deportify</h1>
+            <h1>Deportify</h1>
             </Link>
             <NavBar/>
           </div>
           <Switch>
-            <Route path="/" exact>
+            <Route exact path="/">
               <ItemListContainer />
             </Route>
             <Route exact path="/category/:id">
@@ -37,10 +37,9 @@ const App = () => {
             <Route path="/item/:id">
               <ItemDetailContainer/>
             </Route>
-            <Route path="/cart">
+            <Route  path="/cart">
               <CarritoDeCompras/>
             </Route>
-
           </Switch>
           
           <div className="footer">

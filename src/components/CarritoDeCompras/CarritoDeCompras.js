@@ -9,5 +9,4 @@ import ButtonFinalizarCompra from '../ButtonFinalizarCompra/ButtonFinalizarCompr
         </div>
     )
 }
-
 export default CarritoDeCompras;
