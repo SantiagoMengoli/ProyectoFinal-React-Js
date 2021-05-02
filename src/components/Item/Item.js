@@ -15,7 +15,7 @@ import {
 export const Item = ({ item }) => {
   const classes = useStyles();
     return (
-      <Link to="/item/:id">
+      <Link to={`/item/${item.id}`}>
       <Card className={classes.root}>
         <CardActionArea>
           <CardMedia

@@ -1,6 +1,4 @@
-.botinStyle{
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+.tituloDetalles{
+    margin: 10px;
+    padding: 20px 0 18px 20px;
 }

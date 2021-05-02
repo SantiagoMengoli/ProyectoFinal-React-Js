@@ -1,23 +1,21 @@
+.conteainerDetalles{
+    display: flex;
+    justify-content: center;
+    flex-direction: wrap;
+}
+
 .ItemDetail{
     width: 2500px;
     display: flex;
-    justify-content: space-around;
-    width: 1400px;
-}
-.detallesProducto{
-    font-size: 22px;
+    flex-direction: row;
+    align-items: center;
+    height: 500px;
+    padding: 20px 10px 25px 0;
     margin: 15px;
-    
-    padding: 20px 10px 10px 0;
+    font-size: 35px;
 }
 .fotosProducto{
     display: flex;
-    align-items: center;
-    flex-direction: column;
     margin:10px 0 20px 20px;
     padding: 20px 0 20px 30px;
-}
-.tituloProducto{
-    font-size: 35px;
-    padding-bottom: 40px;
 }
