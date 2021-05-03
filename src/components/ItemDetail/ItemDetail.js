@@ -12,7 +12,7 @@ const ItemDetail = ({detail}) => {
             <div>
                 <div className="conteainerDetalles">
                     <div className="fotosProducto">
-                    <img  src={detail.foto}></img>
+                    <img className="foto" src={detail.foto}></img>
                     </div>
                     <div className="ItemDetail" >
                         {detail.marca}
