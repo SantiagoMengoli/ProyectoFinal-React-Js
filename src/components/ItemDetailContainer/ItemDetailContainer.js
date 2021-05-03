@@ -20,7 +20,7 @@ var detalles = [
 function ItemDetailContainer() {
     const [detail, setDetail] = useState([])
     const { id } = useParams();
-    console.log(id)
+
     
     useEffect(() => {
       setDetail(detalles)
