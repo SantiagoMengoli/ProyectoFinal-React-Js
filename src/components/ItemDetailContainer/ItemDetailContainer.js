@@ -23,16 +23,21 @@ function ItemDetailContainer() {
 
     
     useEffect(() => {
-      setDetail(detalles)
+
+      const productoFiltrado = detalles.filter((producto) => {  
+        return producto.id === Number(id)
+      })
+
+    setDetail(productoFiltrado [0])
     }, [id])
     
     return (
       <div className="detallesProducto">
         <h1 className="tituloDetalles">Detalle de tu producto</h1>
         {
-          detail.map((item) => (
-            <div key = {detail.id}> <ItemDetail detail={item}/> </div>
-          ))
+          detail &&
+            <ItemDetail detail={detail}/>
+        
         }
       </div>
     )
