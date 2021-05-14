@@ -15,6 +15,7 @@ import {
 export const Item = ({ item }) => {
   const classes = useStyles();
     return (
+      <div className="cardStyle">
       <Link to={`/item/${item.id}`}>
       <Card className={classes.root}>
         <CardActionArea>
@@ -35,6 +36,7 @@ export const Item = ({ item }) => {
         </CardActionArea>
       </Card>
       </Link>
+      </div>
   );}
 
   export default function MediaCard() {
@@ -44,9 +46,9 @@ export const Item = ({ item }) => {
  
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    width: 215,
   },
   media: {
-    height: 140,
+    height: 220,
   },
 });

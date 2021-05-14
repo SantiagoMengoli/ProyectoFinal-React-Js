@@ -9,6 +9,16 @@ class ItemList extends Component {
             productoSeleccionado: []
         };
     }
+    /*  componentDidMount(){
+        const [loading, setLoading] = useState(true);
+        setLoading(false);
+
+        setTimeout(() => {
+
+            {loading ? <Spinner /> : null}
+            
+        }, 12000);
+    }*/
     componentDidMount(){
         setTimeout(() => {
             this.setState({
