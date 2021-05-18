@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Item } from '../Item/Item';
+import Spinner from '../Spinner/Spinner'
 import './ItemList.css';
 
 class ItemList extends Component { 
@@ -9,23 +10,23 @@ class ItemList extends Component {
             productoSeleccionado: []
         };
     }
-    /*  componentDidMount(){
-        const [loading, setLoading] = useState(true);
-        setLoading(false);
 
+    state = {
+        loading : false
+    }
+    componentDidMount (){
         setTimeout(() => {
-
-            {loading ? <Spinner /> : null}
-            
-        }, 12000);
-    }*/
-    componentDidMount(){
+            this.setState ({loading: false}) 
+        },5000);
+    }
+   
+   /* componentDidMount(){
         setTimeout(() => {
             this.setState({
                 productoSeleccionado: this.props.items,
             })
         }, 2000);
-    }
+    }*/
     componentDidUpdate(){
         setTimeout(() => {
             this.setState({
@@ -34,8 +35,10 @@ class ItemList extends Component {
         }, 2000);
     }
     render(){
+        const {loading} = this.state
         return (
             <div className="ItemList">
+               {loading ? <Spinner /> : null}
             {
               this.state.productoSeleccionado && this.state.productoSeleccionado.map((producto) => {
                 return <Item item={producto} key={producto.id} />;
