@@ -1,13 +1,16 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount'
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 
 
 
 
-const ItemDetail = ({detail}) => {
+const ItemDetail = ({detail, onAdd}) => {
+
     
+ 
         return (
             <div>
                 <div className="conteainerDetalles">
@@ -31,7 +34,7 @@ const ItemDetail = ({detail}) => {
                     </div>    
                 </div>
                 <div>
-                    <ItemCount />
+                    <ItemCount onAdd={onAdd}/>
                 </div>
             </div>
                 

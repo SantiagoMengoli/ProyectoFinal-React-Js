@@ -17,7 +17,8 @@ var detalles = [
 ]
 
 
-function ItemDetailContainer() {
+function ItemDetailContainer(props) {
+  const onAdd = props;
     const [detail, setDetail] = useState([])
     const { id } = useParams();
 
@@ -36,7 +37,7 @@ function ItemDetailContainer() {
         <h1 className="tituloDetalles">Detalle de tu producto</h1>
         {
           detail &&
-            <ItemDetail detail={detail}/>
+            <ItemDetail onAdd= {onAdd} detail={detail}/>
         
         }
       </div>

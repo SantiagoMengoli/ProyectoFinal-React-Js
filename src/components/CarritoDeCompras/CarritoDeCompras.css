@@ -4,3 +4,17 @@
     align-items: center;
     margin: 20px;
 }
+.tituloCarritoCompras{
+    display: flex;
+    justify-content: left;
+    padding: 15px 0 15px 50px;
+    font-size: 25px;
+}
+.carritoVacio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    font-size: 24px;
+    color: black;
+}
