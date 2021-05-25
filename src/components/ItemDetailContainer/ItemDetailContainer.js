@@ -16,33 +16,30 @@ var detalles = [
 
 ]
 
+function ItemDetailContainer() {
+  const [detail, setDetail] = useState([])
+  const { id } = useParams();
 
-function ItemDetailContainer(props) {
-  const onAdd = props;
-    const [detail, setDetail] = useState([])
-    const { id } = useParams();
 
-    
-    useEffect(() => {
+  useEffect(() => {
 
-      const productoFiltrado = detalles.filter((producto) => {  
-        return producto.id === Number(id)
-      })
+    const productoFiltrado = detalles.filter((producto) => {  
+      return producto.id === Number(id)
+    })
 
-    setDetail(productoFiltrado[0])
-    }, [id])
-    
-    return (
-      <div className="detallesProducto">
-        <h1 className="tituloDetalles">Detalle de tu producto</h1>
-        {
-          detail &&
-            <ItemDetail onAdd= {onAdd} detail={detail}/>
-        
-        }
-      </div>
-    )
-  }
-  
-  export default ItemDetailContainer;
+  setDetail(productoFiltrado[0])
+  }, [id])
 
+  return (
+    <div className="detallesProducto">
+      <h1 className="tituloDetalles">Detalle de tu producto</h1>
+      {
+        detail &&
+          <ItemDetail detail={detail}/>
+
+      }
+    </div>
+  )
+}
+
+export default ItemDetailContainer;

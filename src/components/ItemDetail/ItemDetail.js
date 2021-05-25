@@ -1,16 +1,14 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount'
-import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 
 
 
 
-const ItemDetail = ({detail, onAdd}) => {
+const ItemDetail = ({detail}) => {
+    // const [addCart, setAddCart] = useState ([])
 
-    
- 
         return (
             <div>
                 <div className="conteainerDetalles">
@@ -34,7 +32,7 @@ const ItemDetail = ({detail, onAdd}) => {
                     </div>    
                 </div>
                 <div>
-                    <ItemCount onAdd={onAdd}/>
+                    <ItemCount /*onAdd={onAdd}*//>
                 </div>
             </div>
                 
