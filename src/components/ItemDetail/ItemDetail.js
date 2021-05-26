@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount'
 
@@ -7,7 +7,14 @@ import ItemCount from '../ItemCount/ItemCount'
 
 
 const ItemDetail = ({detail}) => {
-    // const [addCart, setAddCart] = useState ([])
+
+
+    const  [cart, setAddcart] = useState([])
+
+    const  onAdd = (item) => {
+        setAddcart ([...cart, item])
+           alert ('Agregaste ' + [detail.nombre])
+        }
 
         return (
             <div>
@@ -32,7 +39,7 @@ const ItemDetail = ({detail}) => {
                     </div>    
                 </div>
                 <div>
-                    <ItemCount /*onAdd={onAdd}*//>
+                    <ItemCount onAdd={onAdd}/>
                 </div>
             </div>
                 

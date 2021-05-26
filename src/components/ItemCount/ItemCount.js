@@ -14,21 +14,17 @@ export default class ItemCount extends Component {
 
     this.state = {
       count: 0,
-      cart: [],
     };
   
   }
    
   
-  onAdd = (item) => {
-  
-    this.setState({
-      cart : [...this.state.cart, item]
-      
-    });
-    console.log("Item Agregado al Carrito")
+
+
+//Comentario
+  handleIncrement = () => {
     this.setState({ count: this.state.count + 1 });
-  }
+  };
 
   handleDecrement = () => {
     if (this.state.count === 0){
@@ -43,12 +39,12 @@ export default class ItemCount extends Component {
         <h1 className="productoElegido">Producto Elegido</h1>
         <p className="ceroCarrito">{this.state.count}</p>
         <div className="buttons-container">
-          <Button primary onClick={ this.onAdd} >+</Button>
+          <Button primary onClick={this.handleIncrement}>+</Button>
           <Button primary onClick={this.handleDecrement}>-</Button>
         </div>
         <div className="agregarAlCarrito">
           <Link to="/cart">
-              <ButtonExampleAnimated/>
+              <ButtonExampleAnimated onAdd={this.props.onAdd}/>
           </Link>
         </div>
       </div>
