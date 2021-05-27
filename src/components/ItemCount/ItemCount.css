@@ -23,8 +23,10 @@
     
 }
 .ceroCarrito{
-    padding-top: 10px;
+    
     margin-bottom: 15px;
+    width: 41px;
+    height: 60px;
 }
 .buttonCarrito{
     width: 150px;

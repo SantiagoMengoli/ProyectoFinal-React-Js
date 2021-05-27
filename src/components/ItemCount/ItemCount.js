@@ -35,7 +35,7 @@ export default class ItemCount extends Component {
     return (
       <div className="contador-container">
         <h1 className="productoElegido">Producto Elegido</h1>
-        <p className="ceroCarrito">{this.state.count}</p>
+        <input value={this.state.count} className="ceroCarrito" />
         <div className="buttons-container">
           <Button primary onClick={this.handleIncrement}>+</Button>
           <Button primary onClick={this.handleDecrement}>-</Button>

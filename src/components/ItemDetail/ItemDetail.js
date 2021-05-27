@@ -14,9 +14,11 @@ const ItemDetail = ({detail}) => {
 
     const  [cart, setAddcart] = useState([])
     const  [mostrarBotonCompra, setMostrarBotonCompra] = useState (false)
+    const  [cantidadCompra, setCantidadCompra] = useState();
 
-    const  onAdd = (item) => {
-        setAddcart ([...cart, item]);
+    const  onAdd = (item , count) => {
+        setAddcart ([...cart, item, cantidadCompra]);
+        setCantidadCompra (count);
         setMostrarBotonCompra (true);
         }
 
@@ -49,6 +51,7 @@ const ItemDetail = ({detail}) => {
                             mostrarBotonCompra
                                 ?
                                 <div className="mostrarBotonCompra"> 
+                             
                                     <Link
                                     to="/cart" 
                                     className="buy-button" 
