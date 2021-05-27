@@ -1,7 +1,6 @@
 .conteainerDetalles{
     display: flex;
     justify-content: center;
-    flex-direction: wrap;
     padding-bottom: 15px
 }
 

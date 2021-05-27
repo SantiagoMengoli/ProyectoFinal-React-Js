@@ -44,11 +44,11 @@ const ItemDetail = ({detail}) => {
 
                    
                 </div>
-                <div className="mostrarBotonCompra">
+                <div >
                        {
                             mostrarBotonCompra
                                 ?
-                                <div> 
+                                <div className="mostrarBotonCompra"> 
                                     <Link
                                     to="/cart" 
                                     className="buy-button" 

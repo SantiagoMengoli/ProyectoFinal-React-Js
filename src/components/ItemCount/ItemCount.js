@@ -1,11 +1,9 @@
   
 import React, { Component } from 'react';
 import './ItemCount.css';
-import { Button } from 'semantic-ui-react'
-import ButtonExampleAnimated from '../ButtonDetail/ButtonDetail'
-import {
-  Link
-} from "react-router-dom";
+import { Button, Icon } from 'semantic-ui-react'
+
+
 
 export default class ItemCount extends Component {
   
@@ -43,7 +41,14 @@ export default class ItemCount extends Component {
           <Button primary onClick={this.handleDecrement}>-</Button>
         </div>
         <div className="agregarAlCarrito">
-              <ButtonExampleAnimated onAdd={this.props.onAdd}/>
+          <div>
+              <Button onClick={this.props.onAdd} className="buttonCarrito" animated='vertical'>
+                <Button.Content hidden>Agregar al Carrito</Button.Content>
+                <Button.Content visible>
+                  <Icon name ='shop' />
+                </Button.Content>
+              </Button>
+          </div>
         </div>
       </div>
     );
