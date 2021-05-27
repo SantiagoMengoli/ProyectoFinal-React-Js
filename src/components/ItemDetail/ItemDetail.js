@@ -2,18 +2,22 @@
 import React, { useState } from 'react';
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount'
+import ButtonFinalizarCompra from '../ButtonFinalizarCompra/ButtonFinalizarCompra'
+import {
+    Link
+  } from "react-router-dom";
 
 
 
 
 const ItemDetail = ({detail}) => {
 
-
     const  [cart, setAddcart] = useState([])
+    const  [mostrarBotonCompra, setMostrarBotonCompra] = useState (false)
 
     const  onAdd = (item) => {
-        setAddcart ([...cart, item])
-           alert ('Agregaste ' + [detail.nombre])
+        setAddcart ([...cart, item]);
+        setMostrarBotonCompra (true);
         }
 
         return (
@@ -37,10 +41,26 @@ const ItemDetail = ({detail}) => {
                         <br></br>
                         {detail.origen}
                     </div>    
+
+                   
                 </div>
-                <div>
-                    <ItemCount onAdd={onAdd}/>
-                </div>
+                <div className="mostrarBotonCompra">
+                       {
+                            mostrarBotonCompra
+                                ?
+                                <div> 
+                                    <Link
+                                    to="/cart" 
+                                    className="buy-button" 
+                                    onClick={() => setMostrarBotonCompra (true) }> <ButtonFinalizarCompra />
+                                    </Link> 
+                                </div>
+                                :
+                                <div><ItemCount onAdd={onAdd}/></div> 
+                       }
+                       
+                    </div>
+                
             </div>
                 
                 

@@ -43,9 +43,7 @@ export default class ItemCount extends Component {
           <Button primary onClick={this.handleDecrement}>-</Button>
         </div>
         <div className="agregarAlCarrito">
-          <Link to="/cart">
               <ButtonExampleAnimated onAdd={this.props.onAdd}/>
-          </Link>
         </div>
       </div>
     );
