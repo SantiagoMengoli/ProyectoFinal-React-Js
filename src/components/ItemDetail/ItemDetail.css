@@ -30,3 +30,11 @@
 .cantidadCompra{
     height: 200px;
 }
+.cantidadCompra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    font-size: 19px;
+    padding: 25px;
+}
