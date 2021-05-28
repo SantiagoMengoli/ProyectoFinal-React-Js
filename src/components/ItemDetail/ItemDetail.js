@@ -1,26 +1,34 @@
 
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount'
 import ButtonFinalizarCompra from '../ButtonFinalizarCompra/ButtonFinalizarCompra'
 import {
     Link
   } from "react-router-dom";
+import CartContext from '../CartContext/CartContext';
 
 
 
 
-const ItemDetail = ({detail}) => {
+const ItemDetail = ({detail, props}) => {
 
-    const  [cart, setAddcart] = useState([])
     const  [mostrarBotonCompra, setMostrarBotonCompra] = useState (false)
     const  [cantidadCompra, setCantidadCompra] = useState();
 
     const  onAdd = (count) => {
-        setAddcart ([...cart, count]);
         setCantidadCompra (count);
         setMostrarBotonCompra (true);
+
+        
         }
+
+    //Agrego Context del CartContext
+    const { agregarItem } = useContext(CartContext);
+    const carritoContext = () => {
+        const {detail} = props;
+        agregarItem(detail, cantidadCompra);
+    }
 
         return (
             <div>
@@ -58,7 +66,7 @@ const ItemDetail = ({detail}) => {
                                     <Link
                                     to="/cart" 
                                     className="buy-button" 
-                                    onClick={() => setMostrarBotonCompra (true) }> <ButtonFinalizarCompra />
+                                    onClick={() => carritoContext()  }> <ButtonFinalizarCompra />
                                     </Link> 
                                 </div>
                                 :
