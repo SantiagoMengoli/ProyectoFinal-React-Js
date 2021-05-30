@@ -5,6 +5,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import Footer from './components/Footer/Footer'
 import CarritoDeCompras from './components/CarritoDeCompras/CarritoDeCompras'
+import {CartContextProvider} from './CartContext/CartContext'
 
 import {
   BrowserRouter as Router,
@@ -14,9 +15,10 @@ import {
 } from "react-router-dom";
 
 
-const App = () => {
+function App  () {
   return(
     <Router>
+      <CartContextProvider>
       <div>
           <div className="barraHeader">
             <Link to="/" className="tituloPrincipal">
@@ -24,29 +26,28 @@ const App = () => {
             </Link>
             <NavBar/>
           </div>
-          <Switch>
-            <Route exact path="/">
-              <ItemListContainer />
-            </Route>
-            <Route exact path="/category/:id">
-              <ItemListContainer/>
-            </Route>
-            <Route exact path="/category/:id">
-              <ItemListContainer />
-            </Route>
-            <Route path="/item/:id" >
-              <ItemDetailContainer/>
-            </Route>
-            <Route  path="/cart">
-              <CarritoDeCompras/>
-            </Route>
-          </Switch>
-          
+            <Switch>
+              <Route exact path="/">
+                <ItemListContainer />
+              </Route>
+              <Route exact path="/category/:id">
+                <ItemListContainer/>
+              </Route>
+              <Route exact path="/category/:id">
+                <ItemListContainer />
+              </Route>
+              <Route path="/item/:id" >
+                <ItemDetailContainer/>
+              </Route>
+              <Route  path="/cart">
+                <CarritoDeCompras/>
+              </Route>
+            </Switch>
           <div className="footer">
             <Footer/>
           </div>
       </div>
-      
+      </CartContextProvider>
     </Router>
      
     );
