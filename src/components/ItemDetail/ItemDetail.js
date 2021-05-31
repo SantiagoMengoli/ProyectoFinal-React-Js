@@ -11,7 +11,7 @@ import {CartContext} from '../../CartContext/CartContext'
 
 
 
-const ItemDetail = ({detail, props}) => {
+const ItemDetail = ({detail}) => {
 
     const  [mostrarBotonCompra, setMostrarBotonCompra] = useState (false)
     const  [compra, setCompra] = useState({});
@@ -26,10 +26,9 @@ const ItemDetail = ({detail, props}) => {
         
         }
 
-    const { agregarItem } = useContext(CartContext);
+    const { agregarItems  } = useContext(CartContext);
     const carritoContext = () => {
-        const {detail} = props;
-        agregarItem(detail, compra);
+        agregarItems(detail, compra);
     }
 
         return (

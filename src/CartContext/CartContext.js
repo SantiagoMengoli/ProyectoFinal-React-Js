@@ -8,7 +8,7 @@ export const CartContextProvider = ({children}) => {
 
     const agregarItems = (detail, cantidad) => {
         let encontrarProducto = false;
-        let countBi = [...count]
+        let countBi = count;
          
         for (let i = 0; i < countBi.length; i++ ) {
             if (countBi[i].detail.id === detail.id) {
